@@ -3,25 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aquila.Bridge", "Aquila.Bridge\Aquila.Bridge.csproj", "{0A02E67A-43CF-4C1F-A0BF-E2EF0E1AAC1A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aquila.Protocol", "Aquila.Protocol\Aquila.Protocol.csproj", "{2645B437-3797-4AE9-BEFF-3ADC7721997C}"
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0A02E67A-43CF-4C1F-A0BF-E2EF0E1AAC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A02E67A-43CF-4C1F-A0BF-E2EF0E1AAC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A02E67A-43CF-4C1F-A0BF-E2EF0E1AAC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A02E67A-43CF-4C1F-A0BF-E2EF0E1AAC1A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2645B437-3797-4AE9-BEFF-3ADC7721997C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2645B437-3797-4AE9-BEFF-3ADC7721997C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2645B437-3797-4AE9-BEFF-3ADC7721997C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2645B437-3797-4AE9-BEFF-3ADC7721997C}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
