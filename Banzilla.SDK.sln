@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banzilla.Client", "Banzilla.Client\Banzilla.Client.csproj", "{733F9E6C-2736-4D40-8C8B-B8CFAA559A3F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banzilla.Client.Test", "Banzilla.Client.Test\Banzilla.Client.Test.csproj", "{8AEBFD4A-88B6-44FC-ACF8-C0A7599EE312}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banzilla.Client.UnitTest", "Banzilla.Client.UnitTest\Banzilla.Client.UnitTest.csproj", "{076294E4-4B92-4CB2-BCFF-BB6B66432244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{061A4DF8-1F14-469C-827D-E8E9806408CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,22 @@ Global
 		{076294E4-4B92-4CB2-BCFF-BB6B66432244}.Release|x86.ActiveCfg = Release|x86
 		{076294E4-4B92-4CB2-BCFF-BB6B66432244}.Release|x86.Build.0 = Release|x86
 		{076294E4-4B92-4CB2-BCFF-BB6B66432244}.Release|x86.Deploy.0 = Release|x86
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|x64.Build.0 = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Debug|x86.Build.0 = Debug|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|ARM.Build.0 = Release|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|x64.ActiveCfg = Release|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|x64.Build.0 = Release|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|x86.ActiveCfg = Release|Any CPU
+		{061A4DF8-1F14-469C-827D-E8E9806408CE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
