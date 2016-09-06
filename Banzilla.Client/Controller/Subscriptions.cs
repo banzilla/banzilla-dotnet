@@ -40,7 +40,7 @@ namespace Banzilla.Client.Controller
             return ApiRequest("subscription/" + subscriptionId, null, Method.GET, typeof(FullSubscriptionResponse));
         }
 
-        public dynamic Deactivate(string subscriptionId)
+        public dynamic Inactivate(string subscriptionId)
         {
             if (string.IsNullOrEmpty(subscriptionId))
                 return new Error

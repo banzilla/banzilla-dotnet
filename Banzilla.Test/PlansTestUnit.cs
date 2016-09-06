@@ -20,7 +20,7 @@ namespace Banzilla.Test
         [TestMethod]
         public void PlanExecute_MustReturnOk()
         {
-            var result= req.Plans.Execute(new Plan()
+            var result= req.Plans.Create(new Plan()
             {
                 Description = "r2 TEst",
                 Amount = 10,
@@ -46,7 +46,7 @@ namespace Banzilla.Test
         [TestMethod]
         public void PlanExecute_MustReturnError()
         {
-            var result = req.Plans.Execute(new Plan()
+            var result = req.Plans.Create(new Plan()
             {
                 Description = "r2 TEst",
                 Amount = 10,
@@ -104,7 +104,7 @@ namespace Banzilla.Test
         [TestMethod]
         public void PlanDeactivate_MustReturnOk()
         {
-            var result = req.Plans.Deactivate("ZbajJlO8ZnL1XgV1");
+            var result = req.Plans.Inactivate("ZbajJlO8ZnL1XgV1");
 
             Assert.IsTrue(string.IsNullOrEmpty(result.ToString()) || ((Error)result).Description == "The specified plan does not exist or you are not allowed to see its detail.");
         }

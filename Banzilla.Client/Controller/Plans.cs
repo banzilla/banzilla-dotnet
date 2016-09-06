@@ -20,7 +20,7 @@ namespace Banzilla.Client.Controller
          
         }
 
-        public dynamic Execute(Plan plan)
+        public dynamic Create(Plan plan)
         {
               return ApiRequest("plans", plan, Method.POST, typeof(PlanResponse));
         }
@@ -54,7 +54,7 @@ namespace Banzilla.Client.Controller
             return ApiRequest("plans/" + planId, null, Method.DELETE, typeof(string));
         }
 
-        public dynamic Deactivate(string planId)
+        public dynamic Inactivate(string planId)
         {
             if (string.IsNullOrEmpty(planId))
                 return new Error

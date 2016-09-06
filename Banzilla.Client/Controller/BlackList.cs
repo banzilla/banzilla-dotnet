@@ -27,7 +27,7 @@ namespace Banzilla.Client.Controller
         /// <param name="cardNumber">Card number</param>
         /// <param name="Reason">Reason to identify why you send this card to Blacklist</param>
         /// <returns>"ok" or Error Object</returns>
-        public dynamic Execute(string cardNumber, string reason)
+        public dynamic Create(string cardNumber, string reason)
         {
             if (string.IsNullOrEmpty(cardNumber) || string.IsNullOrEmpty(reason))
                 return new  Error

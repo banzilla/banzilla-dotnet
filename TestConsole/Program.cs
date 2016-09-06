@@ -101,7 +101,7 @@ namespace TestConsole
                 Apartment = "123"
             };
 
-           var result =  req.Cards.Execute(new Token()
+           var result =  req.Cards.Create(new Token()
             {
                 Card = new Card()
                 {
@@ -131,7 +131,7 @@ namespace TestConsole
 
         public static void AddCardToBlacklist(APIRequest req)
         {
-            var result= req.BlackList.Execute("347639702413920", "prueba de blacklist desde sdk");
+            var result= req.BlackList.Create("347639702413920", "prueba de blacklist desde sdk");
 
         }
 

@@ -28,7 +28,7 @@ namespace Banzilla.Client.Controller
         /// Encrypt a new Card
         /// </summary>
         /// <param name="token">Token object</param>
-        public dynamic Execute(Token token)
+        public dynamic Create(Token token)
         {
             return  ApiRequest("cards", token, Method.POST, typeof(TokenResponse));
         }

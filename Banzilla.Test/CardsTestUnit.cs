@@ -45,7 +45,7 @@ namespace Banzilla.Test
                 Apartment = "123"
             };
 
-            var result = req.Cards.Execute(new Token()
+            var result = req.Cards.Create(new Token()
             {
                 Card = new Card()
                 {
@@ -88,7 +88,7 @@ namespace Banzilla.Test
                 Apartment = "123"
             };
 
-            var result = req.Cards.Execute(new Token()
+            var result = req.Cards.Create(new Token()
             {
                 MiddleName = "Perea",
                 FirstName = "Arturo",

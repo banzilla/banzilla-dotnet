@@ -18,7 +18,7 @@ namespace Banzilla.Client.Controller
         
         }
 
-       public dynamic Execute(WebHook webhook)
+       public dynamic Create(WebHook webhook)
        {
             return ApiRequest("webhooks", webhook, Method.POST, typeof(WebHooksResponse));
         }

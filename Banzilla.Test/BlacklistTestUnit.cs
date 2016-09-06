@@ -24,7 +24,7 @@ namespace Banzilla.Test
         [TestMethod]
         public void BlackListCreateTest_MustReturnError()
         {
-            var result = req.BlackList.Execute("", "");
+            var result = req.BlackList.Create("", "");
         
 
             Type a = result.GetType();
@@ -35,7 +35,7 @@ namespace Banzilla.Test
         [TestMethod]
         public void BlackListCreateTest_MustReturnOk()
         {
-            var result = req.BlackList.Execute("5165158577299957", "prueba desde SDK");
+            var result = req.BlackList.Create("5165158577299957", "prueba desde SDK");
             if (!string.IsNullOrEmpty(result))
             {
                 Type a = result.GetType();
