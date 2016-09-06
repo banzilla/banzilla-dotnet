@@ -14,7 +14,7 @@ namespace Banzilla.Client.Responses
       public string PlanName { get; set; }
       public string Description { get; set; }
       public decimal Amount { get; set; }
-      public int Frecuency { get; set; }
+      public int Frequency { get; set; }
       public int RepeatEvery { get; set; }
       public int PlanDuration { get; set; }
       public int Attemps { get; set; }

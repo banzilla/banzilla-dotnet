@@ -7,7 +7,7 @@ using Banzilla.Client.Models;
 
 namespace Banzilla.Client.Responses
 {
-    public class SubscriptionResponses
+    public class SubscriptionResponse
     {
         public string IdSubscription { get; set; }
         public string Subscriber { get; set; }
@@ -16,7 +16,7 @@ namespace Banzilla.Client.Responses
         public string IdPlan { get; set; }
         public string PlanName { get; set; }
         public decimal Amount { get; set; }
-        public int Frecuency { get; set; }
+        public int Frequency { get; set; }
         public int RepeatEvery { get; set; }
         public int PlanDuration { get; set; }
         public int MaxAttempts { get; set; }
@@ -25,10 +25,5 @@ namespace Banzilla.Client.Responses
 
     }
 
-    public class FullSubscriptionResponse
-    {
-        public Card Card { get; set; }
-        public Plan Plan { get; set; }
-        public SubscriptionResponses Subscription { get; set; }
-    }
+   
 }

@@ -2,6 +2,7 @@
 using System.Net;
 using Banzilla.Client.Models;
 using Banzilla.Client.Responses;
+using Banzilla.Client.Utils;
 using RestSharp;
 using RestSharp.Authenticators;
 
@@ -25,7 +26,7 @@ namespace Banzilla.Client.Controller
         /// <returns>Confirmation of the charge</returns>
         public dynamic Execute(ChargeCard charge)
         {
-            return ApiRequest("charge/", charge, Method.POST, typeof(ChargeCardResponse));
+           return ApiRequest("charge/", charge, Method.POST, typeof(ChargeCardResponse));
         }
 
         /// <summary>
@@ -54,7 +55,7 @@ namespace Banzilla.Client.Controller
         /// <returns>Confirmation of receipt, the refund allways wait for confirmation from the Banzilla Admin Team</returns>
         public dynamic Execute(Refund refund)
         {
-            return ApiRequest("refund/", refund, Method.POST, typeof(RefundResponse));
+             return ApiRequest("refund/", refund, Method.POST, typeof(RefundResponse));
         }
 
 

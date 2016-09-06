@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Banzilla.Client.Controller;
 using Banzilla.Client.Models;
+using Banzilla.Client.Response;
 using Banzilla.Client.Responses;
+using Banzilla.Client.Utils;
 using RestSharp;
 
 namespace Banzilla.Client.Controller
 {
+ 
     public class Cards : ControllerBase
     {
+  
         /// <summary>
         /// Use for encrypt a new Card (Tokenize)
         /// </summary>
@@ -24,7 +30,7 @@ namespace Banzilla.Client.Controller
         /// <param name="token">Token object</param>
         public dynamic Execute(Token token)
         {
-            return ApiRequest("cards", token, Method.POST, typeof(TokenResponse));
+            return  ApiRequest("cards", token, Method.POST, typeof(TokenResponse));
         }
 
         /// <summary>
@@ -33,6 +39,14 @@ namespace Banzilla.Client.Controller
         /// <param name="token">string: Token Id</param>
         public dynamic Search(string token)
         {
+            if (string.IsNullOrEmpty(token))
+                return new Error
+                {
+                    Description = "Must add a valid token",
+                    Category = "Request"
+                };
+
+
             return ApiRequest("cards/" + token, null, Method.GET, typeof(TokenResponse));
         }
         /// <summary>
@@ -50,6 +64,13 @@ namespace Banzilla.Client.Controller
         /// <param name="token">string: Token Id</param>
         public dynamic Delete(string token)
         {
+            if (string.IsNullOrEmpty(token))
+                return new Error
+                {
+                    Description = "Must add a valid token",
+                    Category = "Request"
+                };
+
             return ApiRequest("cards/" + token, null, Method.DELETE, typeof(string));
         }
         /// <summary>
@@ -58,6 +79,14 @@ namespace Banzilla.Client.Controller
         /// <param name="token">string: Token id</param>
         public dynamic Inactivate(string token)
         {
+            if (string.IsNullOrEmpty(token))
+                return new Error
+                {
+                    Description = "Must add a valid token",
+                    Category = "Request"
+                };
+
+
             return ApiRequest("cards/" + token, null, Method.PUT, typeof(string));
         }
     }

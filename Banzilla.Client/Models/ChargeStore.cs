@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,23 +17,28 @@ namespace Banzilla.Client.Models
         /// <summary>
         /// Required.Store selected by user for payment
         /// </summary>
+        [Required]
         public eStoreGateways eGateway { get; set; }
         /// <summary>
         ///  Required.Definition of Gateway selected.
         /// </summary>
         public string Gateway => eGateway.ToString();
+        [Required]
         public DateTime DueDate { get; set; }
         /// <summary>
         /// Required.Description of charge
         /// </summary>
+        [Required]
         public string Description { get; set; }
         /// <summary>
         /// Required.Object with Order Definition
         /// </summary>
+        [Required, ValidateObject]
         public Order Order { get; set; }
         /// <summary>
         /// Required.Customer object
         /// </summary>
+        [Required, ValidateObject]
         public Customer Customer { get; set; }
       
 

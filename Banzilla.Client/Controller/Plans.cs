@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using Banzilla.Client.Models;
+using Banzilla.Client.Response;
 using Banzilla.Client.Responses;
+using Banzilla.Client.Utils;
 using RestSharp;
 
 namespace Banzilla.Client.Controller
@@ -16,29 +20,51 @@ namespace Banzilla.Client.Controller
          
         }
 
-        public dynamic Execute(Plans plan)
+        public dynamic Execute(Plan plan)
         {
-            return ApiRequest("plans", plan, Method.POST, typeof(PlanResponse));
+              return ApiRequest("plans", plan, Method.POST, typeof(PlanResponse));
         }
 
-        public dynamic Search(string idPlan)
+        public dynamic Search(string planId)
         {
-            return ApiRequest("plans/" + idPlan, null, Method.GET, typeof(PlanResponse));
+            if (string.IsNullOrEmpty(planId))
+                return new Error
+                {
+                    Description = "Must add a valid PlanId .",
+                    Category = "Request"
+                };
+
+
+            return ApiRequest("plans/" + planId, null, Method.GET, typeof(PlanResponse));
         }
 
-        public dynamic List(int page, int size)
+        public dynamic List(ListRequest request)
         {
-            return ApiRequest("plans", new {page, size}, Method.GET, typeof(List<PlanResponse>));
+            return ApiRequest("plans", request, Method.GET, typeof(GenericList<PlanResponse>));
         }
 
-        public dynamic Delete(string idPlan)
+        public dynamic Delete(string planId)
         {
-            return ApiRequest("plans/" + idPlan, null, Method.DELETE, typeof(string));
+            if (string.IsNullOrEmpty(planId))
+                return new Error
+                {
+                    Description = "Must add a valid PlanId .",
+                    Category = "Request"
+                };
+            return ApiRequest("plans/" + planId, null, Method.DELETE, typeof(string));
         }
 
-        public dynamic Deactivate(string idPlan)
+        public dynamic Deactivate(string planId)
         {
-            return ApiRequest("plans/" + idPlan, null, Method.PUT, typeof(string));
+            if (string.IsNullOrEmpty(planId))
+                return new Error
+                {
+                    Description = "Must add a valid PlanId",
+                    Category = "Request"
+                };
+
+
+            return ApiRequest("plans/" + planId, null, Method.PUT, typeof(string));
         }
     }
 }

@@ -15,7 +15,7 @@ namespace TestConsole
         static void Main(string[] args)
         {
             APIRequest req = new APIRequest("BZS-1SRS-VNBi3F", "A24R-2DRV-K3J2X", true);
-            chargeCardTest(req);
+            GetTokensList(req);
 
             Console.ReadLine();
         }
@@ -74,7 +74,7 @@ namespace TestConsole
                 Description = "Prueba de Cargo con Token",
                 Order = new Order()
                 {
-                    Reference = "02/09/16",
+                   Reference = "02/09/16",
                     Amount = 100,
                     eCurrency = eCurrency.MXN
                 }
@@ -90,7 +90,7 @@ namespace TestConsole
 
         public static void CreateToken(APIRequest req)
         {
-            var Address = new Address()
+            var address = new Address()
             {
                 Number = "13",
                 State = "CX",
@@ -105,7 +105,7 @@ namespace TestConsole
             {
                 Card = new Card()
                 {
-                    Address = Address,
+                    Address = address,
                     CardNumber = "347639702413920",
                     SecurityCode = "8375",
                     HolderName = "Arturo Perea",
@@ -116,15 +116,16 @@ namespace TestConsole
                 FirstName = "Arturo",
                 LastName = "Rodriguez",
                 Email = "artcce@hotmail.com",
-                PhoneNumber = "5527251902"
+             PhoneNumber = "5527251902"
             });
             
+            Console.Write(result.ToString());
         }
 
 
         public static void SearchToken(APIRequest req)
         {
-            var result = req.Cards.Search("Bz7TkZ9o2bz8xOdgjv");
+            var result = req.Cards.Search("");
 
         }
 

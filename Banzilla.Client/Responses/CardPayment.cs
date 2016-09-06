@@ -8,6 +8,7 @@ namespace Banzilla.Client.Models
 {
    public class CardPayment
     {
+
        public string Authorization { get; set; }
        public string BrandCard { get; set; }
        public string CardNumber { get; set; }

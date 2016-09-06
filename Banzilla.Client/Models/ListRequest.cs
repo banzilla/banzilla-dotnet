@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Banzilla.Client.Models
 {
-   public  class RefundPayment
+    public class ListRequest
     {
         [Required]
-        public string Authorization { get; set; }
+       public int page { get; set; }
         [Required]
-        public decimal Amount { get; set; }
+        public int size { get; set; }
 
     }
 }

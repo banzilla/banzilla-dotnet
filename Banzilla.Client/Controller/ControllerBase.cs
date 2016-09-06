@@ -4,6 +4,7 @@ using System.Net;
 using Banzilla.Client.Models;
 using Banzilla.Client.Response;
 using Banzilla.Client.Responses;
+using Banzilla.Client.Utils;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Authenticators;
@@ -26,7 +27,16 @@ namespace Banzilla.Client.Controller
 
         internal dynamic ApiRequest(string path, object parameters, Method httpMethod, Type responseType)
         {
+            if (parameters != null)
+            {
+
+                var error = Validation.Validate(parameters);
+                if (error != null)
+                    return error;
+            }
+
             try
+
             {
                 var host = $"{GetRequestUrl(_sandBox)}";
                 var user = _apiKey;

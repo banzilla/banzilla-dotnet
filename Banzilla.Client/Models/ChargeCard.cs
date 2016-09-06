@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +20,12 @@ namespace Banzilla.Client.Models
         /// <summary>
         ///  Required.Description of charge. This would appear in the transaction of  customer.
         /// </summary>
+        [Required]
         public string Description { get; set; }
         /// <summary>
         ///  Required.Type of Card used by customer.
         /// </summary>
+        [Required]
         public eCardGateway eGateway { get; set; }
         /// <summary>
         ///  Required.Definition of Gateway selected.
@@ -31,14 +34,17 @@ namespace Banzilla.Client.Models
         /// <summary>
         /// Required.Summary of the charge.
         /// </summary>
+        [Required, ValidateObject]
         public Order Order { get; set; }
         /// <summary>
         /// Required.Card object. Contains all info from card.
         /// </summary>
+        [Required, ValidateObject]
         public Card Card { get; set; }
         /// <summary>
         /// Required.Customer info.
         /// </summary>
+        [Required, ValidateObject]
         public Customer Customer { get; set; }
         /// <summary>
         /// Optional. Shipping info.
