@@ -15,6 +15,7 @@ namespace Banzilla.Client.Controller
     {
         private readonly string _apiKey;
         private readonly string _secretKey;
+        public string lastResponse;
 
         private bool _sandBox;
 
@@ -49,12 +50,12 @@ namespace Banzilla.Client.Controller
                     request.AddJsonBody(parameters);
 
                 var response = client.Execute(request);
-
+                lastResponse = response.Content;
                 if (!Enum.IsDefined(typeof(HttpStatusCode), response.StatusCode))
                 {
                     throw new Exception(response.ErrorMessage);
                 }
-                if (response.StatusCode == (HttpStatusCode) HttpStatusCode.InternalServerError)
+                if (response.StatusCode != (HttpStatusCode) HttpStatusCode.OK)
                 {
                     return JsonConvert.DeserializeObject(response.Content, typeof(Error));
                 }
