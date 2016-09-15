@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
 using System.Net;
 using Banzilla.Client.Models;
 using Banzilla.Client.Response;
@@ -72,7 +74,12 @@ namespace Banzilla.Client.Controller
 
         private string GetRequestUrl(bool sandbox)
         {
-            return sandbox ? "https://sandbox.banzilla.com/v1/" : "https://api.banzilla.com/v1/";
+
+            var key = ConfigurationManager.AppSettings.AllKeys.FirstOrDefault(k => k == "banzilla:local");
+            if (string.IsNullOrWhiteSpace(key) || ConfigurationManager.AppSettings["banzilla:local"].ToLower() == "false")
+                return sandbox ? "https://sandbox.banzilla.com/v1/" : "https://api.banzilla.com/v1/";
+            
+            return sandbox ? "http://10.0.0.199/v1/" : "https://10.0.0.197/v1/";
         }
 
     }
