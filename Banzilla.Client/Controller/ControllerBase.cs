@@ -79,7 +79,7 @@ namespace Banzilla.Client.Controller
             if (string.IsNullOrWhiteSpace(key) || ConfigurationManager.AppSettings["banzilla:local"].ToLower() == "false")
                 return sandbox ? "https://sandbox.banzilla.com/v1/" : "https://api.banzilla.com/v1/";
             
-            return sandbox ? "http://10.0.0.199/v1/" : "https://10.0.0.197/v1/";
+            return sandbox ? "http://10.0.1.199/v1/" : "http://10.0.1.197/v1/";
         }
 
     }

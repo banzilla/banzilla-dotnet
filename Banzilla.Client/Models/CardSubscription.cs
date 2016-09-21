@@ -29,7 +29,7 @@ namespace Banzilla.Client.Models
         /// Reference number
         /// </summary>
         [Required]
-        public string OrderId { get; set; }
+        public string IdOrder { get; set; }
         /// <summary>
         /// Email of Subscriber
         /// </summary>
