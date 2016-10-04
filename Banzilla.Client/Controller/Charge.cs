@@ -48,6 +48,11 @@ namespace Banzilla.Client.Controller
             return ApiRequest("charge/", store, Method.POST,  typeof(ChargeStoreResponse));
         }
 
+
+        public dynamic Execute(ChargeSpei spei)
+        {
+           return ApiRequest("charge/",spei,Method.POST, typeof(ChargeSpeiResponse));
+        }
         /// <summary>
         /// Refund Request
         /// </summary>

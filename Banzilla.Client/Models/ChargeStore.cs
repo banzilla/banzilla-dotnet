@@ -40,9 +40,16 @@ namespace Banzilla.Client.Models
         /// </summary>
         [Required, ValidateObject]
         public Customer Customer { get; set; }
-      
 
-     
-  
+
+        /// <summary>
+        /// Optional. Shipping info.
+        /// </summary>
+        public Shipping Shipping { get; set; }
+        /// <summary>
+        /// Optional.Detailed list of items.
+        /// </summary>
+        public List<Item> Items { get; set; }
+
     }
 }

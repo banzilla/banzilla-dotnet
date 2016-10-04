@@ -61,10 +61,12 @@
     <Compile Include="Controller\WebHooks.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\ChargeSpei.cs" />
     <Compile Include="Models\ListRequest.cs" />
     <Compile Include="Responses\CardPayment.cs" />
     <Compile Include="Models\ChargeCard.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Responses\ChargeSpeiResponse.cs" />
     <Compile Include="Responses\FullSubscriptionResponse.cs" />
     <Compile Include="Responses\GenericList.cs" />
     <Compile Include="Models\Item.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Responses\Success.cs" />
     <Compile Include="Responses\TokenResponse.cs" />
     <Compile Include="Responses\TransactionResponse.cs" />
+    <Compile Include="Responses\TransferPayment.cs" />
     <Compile Include="Responses\WebHooksResponse.cs" />
     <Compile Include="Utils\CreditCardValidator.cs" />
     <Compile Include="Utils\eAux.cs" />
