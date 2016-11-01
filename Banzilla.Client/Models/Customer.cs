@@ -25,7 +25,6 @@ namespace Banzilla.Client.Models
         /// <summary>
         /// Customer Last Name
         /// </summary>
-        [Required]
         public string LastName { get; set; }
 
         /// <summary>

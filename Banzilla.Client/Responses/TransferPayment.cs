@@ -10,5 +10,9 @@ namespace Banzilla.Client.Responses
     {
       public string Clabe { get; set; }
       public DateTime DueDate { get; set; }
+      public string Reference { get; set; }
+      public string Bank { get; set; }
+      public string UrlDocument { get; set; }
+
     }
 }
