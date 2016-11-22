@@ -10,7 +10,7 @@ namespace Banzilla.Client.Models
     {
         public string BarCode { get; set; }
         public string DueDate { get; set; }
-        public string UrlBarCode { get; set; }
+        public string UrlDocument { get; set; }
 
     }
 }
