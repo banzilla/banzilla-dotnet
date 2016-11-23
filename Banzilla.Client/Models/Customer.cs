@@ -39,5 +39,15 @@ namespace Banzilla.Client.Models
         /// </summary>
         [Required, ValidateObject]
         public Address Address { get; set; }
+
+        /// <summary>
+        /// Optional: Customer Phone Number
+        /// </summary>
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Optional: Customer Mobile
+        /// </summary>
+        public string Mobile { get; set; }
     }
 }

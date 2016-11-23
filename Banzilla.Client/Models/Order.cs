@@ -16,6 +16,9 @@ namespace Banzilla.Client.Models
         public decimal Amount { get; set; }
         [Required]
         public eCurrency eCurrency { get; set; }
+
+        public string Website { get; set; }
+
         public string Currency => eCurrency.ToString();
     }
 }

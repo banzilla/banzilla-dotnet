@@ -42,7 +42,6 @@ namespace Banzilla.Test
                 },
                 Phone = "5511703731",
                 Email = "aperea@holdingleos.com",
-                OrderId = "123",
                 IdPlan = "V5WQE9PDbwxfx9U4",
                 StartDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy"),
                 Subscriber = "Arturo Perea"
@@ -85,7 +84,6 @@ namespace Banzilla.Test
                 },
                 Phone = "5511703731",
                 Email = "aperea@holdingleos.com",
-                OrderId = "123",
                 IdPlan = "V5WQE9PDbwxfx9U4",
                 StartDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy"),
                 Subscriber = "Arturo Perea"
