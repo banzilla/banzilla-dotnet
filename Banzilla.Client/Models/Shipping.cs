@@ -36,7 +36,7 @@ namespace Banzilla.Client.Models
         ///  [Optional] Phonenumber of receiver
         /// </summary>
         [Phone]
-        public string PhoneNumber { get; set; }
+        public string Phone { get; set; }
         /// <summary>
         /// [Optional] Shipping Address
         /// </summary>

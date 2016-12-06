@@ -43,7 +43,7 @@ namespace Banzilla.Client.Models
         /// <summary>
         /// Optional: Customer Phone Number
         /// </summary>
-        public string PhoneNumber { get; set; }
+        public string Phone { get; set; }
 
         /// <summary>
         /// Optional: Customer Mobile

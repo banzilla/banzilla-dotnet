@@ -21,7 +21,7 @@ namespace Banzilla.Client.Models
         public string Email { get; set; }
         [Required]
         [Phone]
-        public string PhoneNumber { get; set; }
+        public string Phone { get; set; }
         [Required, ValidateObject]
         public Card Card { get; set; }
 
