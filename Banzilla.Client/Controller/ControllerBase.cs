@@ -10,6 +10,7 @@ using Banzilla.Client.Utils;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Authenticators;
+using System.Web;
 
 namespace Banzilla.Client.Controller
 {
@@ -38,9 +39,6 @@ namespace Banzilla.Client.Controller
                     return error;
             }
 
-            try
-
-            {
                 var host = $"{GetRequestUrl(_sandBox)}";
                 var user = _apiKey;
                 var password = _secretKey;
@@ -55,21 +53,19 @@ namespace Banzilla.Client.Controller
                 lastResponse = response.Content;
                 if (!Enum.IsDefined(typeof(HttpStatusCode), response.StatusCode))
                 {
-                    throw new Exception(response.ErrorMessage);
+                    throw new HttpException((int)response.StatusCode, response.ErrorMessage);
                 }
                 if (response.StatusCode != (HttpStatusCode) HttpStatusCode.OK)
                 {
+                    if(string.IsNullOrEmpty(response.Content)) throw new HttpException((int)response.StatusCode, response.ErrorMessage);
+
                     return JsonConvert.DeserializeObject(response.Content, typeof(Error));
                 }
 
                 var result = JsonConvert.DeserializeObject(response.Content, responseType);
 
                 return result;
-            }
-            catch (Exception exc)
-            {
-                return "ApiRequestError";
-            }
+        
         }
 
         private string GetRequestUrl(bool sandbox)
