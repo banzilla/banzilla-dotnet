@@ -21,7 +21,7 @@ namespace Banzilla.Client.Models
         [Required]
         public string Token { get; set; }
         /// <summary>
-        /// Method: Token
+        /// Method: Token (not Editable)
         /// </summary>
         public string Method => "token";
         /// <summary>

@@ -116,7 +116,7 @@ namespace TestConsole
                 FirstName = "Arturo",
                 LastName = "Rodriguez",
                 Email = "artcce@hotmail.com",
-             PhoneNumber = "5527251902"
+                Phone= "5527251902"
             });
             
             Console.Write(result.ToString());

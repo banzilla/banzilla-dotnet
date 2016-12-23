@@ -16,7 +16,7 @@ namespace Banzilla.Test
         private APIRequest req;
         public ChargeCardTestUnit()
         {
-            req = new APIRequest("BZS-1SRS-VNBi3F", "A24R-2DRV-K3J2X", true); //Sandbox
+            req = new APIRequest("BZS-il6C-Ow13lQ", "MMJY-NZIO-6ZW80", true); //Sandbox
         }
 
 
@@ -25,13 +25,14 @@ namespace Banzilla.Test
         {
             var Address = new Address()
             {
-                Number = "13",
+                Number = "68",
+
                 State = "CX",
-                City = "Puebla",
-                Street = "Desconocida",
-                ZipCode = "73310",
+                City = "XOCO",
+                Street = "libertad",
+                ZipCode = "03330",
                 Country = "MEX",
-                Apartment = "123"
+                Apartment = "21"
             };
 
             var result = req.Charge.Execute(new ChargeCard()
@@ -39,22 +40,22 @@ namespace Banzilla.Test
                 Card = new Card()
                 {
                     Address = Address,
-                    CardNumber = "347639702413920",
-                    SecurityCode = "8375",
+                    CardNumber = "4898242678918611",
+                    SecurityCode = "106",
                     HolderName = "Arturo Perea",
-                    ExpYear = "17",
-                    ExpMonth = "08"
+                    ExpYear = "19",
+                    ExpMonth = "04"
                 },
                 Customer = new Customer()
                 {
                     Address = Address,
-                    MiddleName = "Perea",
-                    FirstName = "Arturo",
-                    LastName = "Rodriguez",
-                    Email = "artcce@gmail.com"
+                    MiddleName = "Perez",
+                    FirstName = "Rodolfo",
+                    LastName = "Perez",
+                    Email = "sreyes@holdingleos.com"
                 },
                 Description = "prueba de cargo",
-                eGateway = eCardGateway.amex,
+                eGateway = eCardGateway.visa,
                 Order = new Order()
                 {
                     Reference = "123",

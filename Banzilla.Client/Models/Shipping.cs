@@ -24,7 +24,6 @@ namespace Banzilla.Client.Models
         /// <summary>
         /// LastName of receiver
         /// </summary>
-        [Required]
         public string LastName { get; set; }
         /// <summary>
         /// Email of receiver

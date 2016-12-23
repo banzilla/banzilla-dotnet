@@ -60,7 +60,7 @@ namespace Banzilla.Test
                 FirstName = "Arturo",
                 LastName = "Rodriguez",
                 Email = "artcce@hotmail.com",
-                PhoneNumber = "5527251902"
+                Phone= "5527251902"
             });
 
             Type a = result.GetType();
@@ -94,7 +94,7 @@ namespace Banzilla.Test
                 FirstName = "Arturo",
                 LastName = "Rodriguez",
                 Email = "artcce@hotmail.com",
-                PhoneNumber = "5527251902"
+                Phone= "5527251902"
             });
 
             Type a = result.GetType();

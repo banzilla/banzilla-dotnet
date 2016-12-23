@@ -44,6 +44,7 @@ namespace Banzilla.Client.Models
         /// Postal code
         /// </summary>
         [Required]
+        [MinLength(5)]
         public string ZipCode { get; set; }
     }
 }
