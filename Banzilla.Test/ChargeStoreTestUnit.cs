@@ -41,10 +41,10 @@ namespace Banzilla.Test
                 Customer = new Customer()
                 {
                     Address = Address,
-                    MiddleName = "Perea",
-                    FirstName = "Arturo",
-                    LastName = "Rodriguez",
-                    Email = "artcce@gmail.com"
+                    MiddleName = "Lopez",
+                    FirstName = "Pancho",
+                    LastName = "Perez",
+                    Email = "pancho@correo.com"
                 },
                 Description = "prueba de cargo",
                 eGateway = eStoreGateways.oxxo,

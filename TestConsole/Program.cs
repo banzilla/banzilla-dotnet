@@ -40,17 +40,17 @@ namespace TestConsole
                     Address = Address,
                     CardNumber = "347639702413920",
                     SecurityCode = "8375",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "17",
                     ExpMonth = "08"
                 },
                 Customer = new Customer()
                 {
                     Address = Address,
-                    MiddleName = "Perea",
-                    FirstName = "Arturo",
-                    LastName = "Rodriguez",
-                    Email = "artcce@gmail.com"
+                    MiddleName = "Lopez",
+                    FirstName = "Pancho",
+                    LastName = "Perez",
+                    Email = "pancho@correo.com"
                 },
                 Description = "prueba de cargo",
                 eGateway = eCardGateway.amex,
@@ -108,13 +108,13 @@ namespace TestConsole
                     Address = address,
                     CardNumber = "347639702413920",
                     SecurityCode = "8375",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "17",
                     ExpMonth = "08"
                 },
-                MiddleName = "Perea",
-                FirstName = "Arturo",
-                LastName = "Rodriguez",
+                MiddleName = "Lopez",
+                FirstName = "Pancho",
+                LastName = "Perez",
                 Email = "artcce@hotmail.com",
                 Phone= "5527251902"
             });

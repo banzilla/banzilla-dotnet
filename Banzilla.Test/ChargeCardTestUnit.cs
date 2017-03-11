@@ -42,7 +42,7 @@ namespace Banzilla.Test
                     Address = Address,
                     CardNumber = "4898242678918611",
                     SecurityCode = "106",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "19",
                     ExpMonth = "04"
                 },
@@ -93,17 +93,17 @@ namespace Banzilla.Test
                     Address = Address,
                     CardNumber = "3476397024139",
                     SecurityCode = "8375",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "17",
                     ExpMonth = "08"
                 },
                 Customer = new Customer()
                 {
                     Address = Address,
-                    MiddleName = "Perea",
-                    FirstName = "Arturo",
-                    LastName = "Rodriguez",
-                    Email = "artcce@gmail.com"
+                    MiddleName = "Lopez",
+                    FirstName = "Pancho",
+                    LastName = "Perez",
+                    Email = "pancho@correo.com"
                 },
                 Description = "prueba de cargo",
                 eGateway = eCardGateway.amex,
@@ -142,17 +142,17 @@ namespace Banzilla.Test
                     Address = Address,
                     CardNumber = "341673881213039",
                     SecurityCode = "6168",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "17",
                     ExpMonth = "10"
                 },
                 Customer = new Customer()
                 {
                     Address = Address,
-                    MiddleName = "Perea",
-                    FirstName = "Arturo",
-                    LastName = "Rodriguez",
-                    Email = "artcce@gmail.com"
+                    MiddleName = "Lopez",
+                    FirstName = "Pancho",
+                    LastName = "Perez",
+                    Email = "pancho@correo.com"
                 },
                 Description = "prueba de cargo",
                 eGateway = eCardGateway.amex,

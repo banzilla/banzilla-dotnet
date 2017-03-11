@@ -48,7 +48,7 @@ namespace Banzilla.Client.Controller
                     Description = "Must add a valid subscriptionId",
                     Category = "Request"
                 };
-            return ApiRequest("subscription/" + subscriptionId, null, Method.PUT, typeof(string));
+            return ApiRequest("subscription/" + subscriptionId, null, Method.DELETE, typeof(string));
         }
 
         public dynamic List()

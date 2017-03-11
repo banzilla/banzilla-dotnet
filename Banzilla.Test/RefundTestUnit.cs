@@ -30,7 +30,7 @@ namespace Banzilla.Test
                Amount = 1,
               eCurrency = eCurrency.MXN,
               Reason = "Prueba",
-              TransactionId = "123"
+              IdTransaction = "123"
             });
 
             Type a = result.GetType();

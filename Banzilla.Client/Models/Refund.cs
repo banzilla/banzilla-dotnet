@@ -11,7 +11,7 @@ namespace Banzilla.Client.Models
    public class Refund
     {
         [Required]
-        public string TransactionId { get; set; }
+        public string IdTransaction { get; set; }
         [Required]
         public decimal Amount { get; set; }
         [Required]

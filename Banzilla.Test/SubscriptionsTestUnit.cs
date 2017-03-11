@@ -36,15 +36,15 @@ namespace Banzilla.Test
                     Address = address,
                     CardNumber = "341673881213039",
                     SecurityCode = "6168",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "17",
                     ExpMonth = "10"
                 },
                 Phone = "5511703731",
-                Email = "aperea@holdingleos.com",
+                Email = "aLopez@holdingleos.com",
                 IdPlan = "V5WQE9PDbwxfx9U4",
                 StartDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy"),
-                Subscriber = "Arturo Perea"
+                Subscriber = "Pancho Lopez"
             });
 
             Type a = result.GetType();
@@ -78,15 +78,15 @@ namespace Banzilla.Test
                     Address = address,
                     CardNumber = "34167388121",
                     SecurityCode = "6168",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "17",
                     ExpMonth = "10"
                 },
                 Phone = "5511703731",
-                Email = "aperea@holdingleos.com",
+                Email = "aLopez@holdingleos.com",
                 IdPlan = "V5WQE9PDbwxfx9U4",
                 StartDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy"),
-                Subscriber = "Arturo Perea"
+                Subscriber = "Pancho Lopez"
             });
 
             Type a = result.GetType();
@@ -105,9 +105,9 @@ namespace Banzilla.Test
             {
                 Phone = "5527251902",
                 Token = "552725192",
-                Email = "aperea@holdingleos.com",
+                Email = "aLopez@holdingleos.com",
                 StartDate = DateTime.Now.AddDays(1).ToString("MM/dd/yyyy"),
-                Subscriber = "Arturo Perea",
+                Subscriber = "Pancho Lopez",
                 PlanId = "V5WQE9PDbwxfx9U4",
                 OrderId = "234"
             });

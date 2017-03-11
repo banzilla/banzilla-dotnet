@@ -52,13 +52,13 @@ namespace Banzilla.Test
                     Address = address,
                     CardNumber = "341192111079623",
                     SecurityCode = "4375",
-                    HolderName = "Arturo Perea",
+                    HolderName = "Pancho Lopez",
                     ExpYear = "19",
                     ExpMonth = "03"
                 },
-                MiddleName = "Perea",
-                FirstName = "Arturo",
-                LastName = "Rodriguez",
+                MiddleName = "Lopez",
+                FirstName = "Pancho",
+                LastName = "Perez",
                 Email = "artcce@hotmail.com",
                 Phone= "5527251902"
             });
@@ -90,9 +90,9 @@ namespace Banzilla.Test
 
             var result = req.Cards.Create(new Token()
             {
-                MiddleName = "Perea",
-                FirstName = "Arturo",
-                LastName = "Rodriguez",
+                MiddleName = "Lopez",
+                FirstName = "Pancho",
+                LastName = "Perez",
                 Email = "artcce@hotmail.com",
                 Phone= "5527251902"
             });
