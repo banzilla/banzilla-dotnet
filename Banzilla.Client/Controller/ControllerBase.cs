@@ -44,7 +44,10 @@ namespace Banzilla.Client.Controller
                 var password = _secretKey;
 
                 var client = new RestClient(host) {Authenticator = new HttpBasicAuthenticator(user, password)};
-                var request = new RestRequest(path, httpMethod);
+
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            var request = new RestRequest(path, httpMethod);
                 string json = JsonConvert.SerializeObject(parameters);
                 if (parameters != null)
                     request.AddJsonBody(parameters);
